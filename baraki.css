@@ -81,3 +81,24 @@ footer address {
 .news-list {
  padding: 10px;
 }
+.product button {
+ background-color: #4CAF50; /* Зеленый цвет */
+ color: white;              /* Текст белого цвета */
+ border: none;              /* Убираем рамку */
+ border-radius: 5px;       /* Скругленные углы */
+ padding: 10px 20px;       /* Отступы внутри кнопки */
+ cursor: pointer;           /* Курсор-pointer при наведении */
+ font-size: 16px;          /* Размер шрифта */
+ margin-top: 10px;         /* Отступ сверху */
+ transition: background-color 0.3s, transform 0.3s; /* Плавные переходы */
+}
+
+.product button:hover {
+ background-color: #45a049; /* Темно-зеленый цвет при наведении */
+ transform: translateY(-3px); /* Небольшое поднятие кнопки */
+}
+
+.product button:active {
+ transform: translateY(0); /* Вернуть на место при нажатии */
+}
+
