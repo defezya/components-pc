@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>OMAGAD</title>
+  <style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+  }
+  h3 {
+    font-size: 1.2em;
+  }
+  img {
+    max-width: 50%;
+    height: 300px;
+    display: block;
+  }
+</style>
+</head>
+<body>
+  <div id="content"></div>
+  <script src="data.js"></script>
+  <script>
+    const data = JSON.parse (JSON.stringify (dataInfo))
+    console.log (data)
+    const container = document.getElementById('content');
+    dataInfo.forEach(item => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      const img = document.createElement('img');
+      img.src = item.url;
+      img.alt = item.title;
+      const textContainer = document.createElement('div');
+      const title = document.createElement('h2');
+      title.textContent = item.title;
+      const desc = document.createElement('p');
+      desc.textContent = item.description;
+      textContainer.appendChild(title);
+      textContainer.appendChild(desc);
+      card.appendChild(img);
+      card.appendChild(textContainer);
+      container.appendChild(card);
+    });
+  </script>
+      <script>
+        const description = "Это изображение";
+
+        const contentDiv = document.querySelector('.content');
+
+        const title = document.createElement('h1');
+        title.textContent = "Заголовок документа";
+
+        const subtitle = document.createElement('h2');
+        subtitle.textContent = "Подзаголовок";
+
+        const smallTitle = document.createElement('h3');
+        smallTitle.textContent = "Маленький заголовок";
+
+        const paragraph = document.createElement('p');
+        paragraph.textContent = description;
+
+        contentDiv.appendChild(title);
+        contentDiv.appendChild(subtitle);
+        contentDiv.appendChild(smallTitle);
+        contentDiv.appendChild(paragraph);
+    </script>
+     <h1>Заголовок документа</h1>
+    <h2>Подзаголовок</h2>
+    <h3>Маленький заголовок</h3>
+
+    <p>Это параграф текста, полученного из данных.</p>
+
+</body>
+</html>
