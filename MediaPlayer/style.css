@@ -1,0 +1,47 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: Arial, sans-serif;
+background-color: #fafafa;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+}
+
+.player-container {
+text-align: center;
+position: relative;
+width: 640px;
+overflow: hidden;
+}
+
+.controls {
+display: flex;
+align-items: center;
+gap: 1rem;
+margin-top: 10px;
+}
+
+#playPauseBtn {
+cursor: pointer;
+transition: transform .2s ease-in-out;
+}
+
+#playPauseBtn:hover {
+transform: scale(1.1);
+}
+
+#progressBar,
+#volumeControl {
+width: 20%;
+}
+
+#currentTime,
+#duration {
+color: #666;
+}
