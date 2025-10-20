@@ -1,0 +1,67 @@
+ .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            display: inline-block;
+            margin-right: 10px;
+            text-align: center;
+            line-height: 100px;
+            font-size: 20px;
+        }
+        .box {
+    width: 100px;
+    height: 100px;
+    background-color: #ffc107; /* Яркий жёлтый фон */
+    border-radius: 10px; /* Закругленные углы */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Тень вокруг блоков */
+    transition: transform 0.3s ease-in-out; /* Анимация трансформации */
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to bottom right, transparent, rgba(0, 0, 0, 0.3));
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.box:hover {
+    transform: scale(1.05); /* Немного увеличим размер при наведении мыши */
+}
+
+.box:hover::before {
+    opacity: 1; /* Показываем градиент при наведении */
+}
+
+/* Стилизация кнопок */
+button {
+    background-color: #005304;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #00c40a;
+}
+
